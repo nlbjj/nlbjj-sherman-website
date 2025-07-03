@@ -1,28 +1,9 @@
----
-title: "Next Level Jiu-Jitsu Sherman"
-subtitle: "Located inside Midway Mall, unit 009, Sherman, Texas"
-hero_image: ""
-welcome_title: "Welcome to Next Level Jiu-Jitsu Sherman"
-welcome_text: |
-  Next Level Jiu-Jitsu Sherman is proud to be part of the Next Level Brazilian Jiu-Jitsu Association, a worldwide association of instructors and students who share the passion and legacy of traditional Jiu-Jitsu.
-
-  Our Sherman location offers world-class Brazilian Jiu-Jitsu training for all ages and skill levels in a supportive and challenging environment. Whether you're looking to learn self-defense, get in shape, or compete at the highest levels, our experienced instructors will guide you every step of the way.
-quote_text: "The approach to combat and everyday life should be the same."
-quote_author: "Miyamoto Musashi"
-cta_title: "Ready to Start Your Jiu-Jitsu Journey?"
-cta_text: "Join us at Next Level Jiu-Jitsu Sherman and experience the physical, mental, and social benefits of training in the art of Brazilian Jiu-Jitsu."
-location_name: "Next Level Jiu-Jitsu Sherman"
-address_line1: "4800 Texoma Parkway, Unit 009"
-address_line2: "Sherman, Texas 75090"
-address_line3: "Inside Midway Mall"
-location_description: "Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009."
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>Next Level Jiu-Jitsu Sherman</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -31,15 +12,14 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="assets/logo.svg" alt="{{ page.title }}" class="logo-img">
+                    <img src="assets/next_level_logo.png" alt="Next Level Jiu-Jitsu Sherman" class="logo-img">
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#instructors">Instructors</a></li>
+                    <li><a href="#programs">Programs</a></li>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#events">Events</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -47,13 +27,13 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
     </header>
 
     <main>
-        <section id="home" class="hero" {% if page.hero_image %}style="background-image: url('{{ page.hero_image }}')"{% endif %}>
+        <section id="home" class="hero">
             <div class="hero-content">
-                <h1>{{ page.title }}</h1>
-                <p class="hero-subtitle">{{ page.subtitle }}</p>
+                <h1>Next Level Jiu-Jitsu Sherman</h1>
+                <p class="hero-subtitle">Located inside Midway Mall, unit 009, Sherman, Texas</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Schedule a Free Trial</a>
-                    <a href="#schedule" class="btn btn-secondary">View Class Schedule</a>
+                    <a href="#programs" class="btn btn-secondary">View Our Programs</a>
                     <a href="#about" class="btn btn-secondary">Learn More About Us</a>
                 </div>
             </div>
@@ -61,21 +41,46 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
 
         <section id="about" class="about">
             <div class="container">
-                <h2>{{ page.welcome_title }}</h2>
+                <h2>Welcome to Next Level Jiu-Jitsu Sherman</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        {{ page.welcome_text | markdownify }}
-                        <a href="#about" class="btn btn-primary">Learn More About Us</a>
+                        <p>Next Level Jiu-Jitsu Sherman is proud to be part of the Next Level Brazilian Jiu-Jitsu Association, a worldwide association of instructors and students who share the passion and legacy of traditional Jiu-Jitsu.</p>
+                        
+                        <p>Our Sherman location offers world-class Brazilian Jiu-Jitsu training for all ages and skill levels in a supportive and challenging environment. Whether you're looking to learn self-defense, get in shape, or compete at the highest levels, our experienced instructors will guide you every step of the way.</p>
+                        
+                        <a href="#contact" class="btn btn-primary">Learn More About Us</a>
                     </div>
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1577998555981-6e798325995e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Jiu-Jitsu Training" class="training-image">
+                        <img src="assets/images/nlbjj_main_group_photo.png" alt="Next Level BJJ Group Training" class="training-image">
                     </div>
                 </div>
                 
                 <blockquote class="quote">
-                    <p>"{{ page.quote_text }}"</p>
-                    <cite>- {{ page.quote_author }}</cite>
+                    <p>"The approach to combat and everyday life should be the same."</p>
+                    <cite>- Miyamoto Musashi</cite>
                 </blockquote>
+            </div>
+        </section>
+
+        <section id="instructors" class="instructors">
+            <div class="container">
+                <h2>Our Lineage</h2>
+                <div class="instructor-content">
+                    <div class="instructor-text">
+                        <h3>World-Class Instruction</h3>
+                        <p>Our instructors are part of the Next Level Brazilian Jiu-Jitsu Association, founded by Professor Tony Eduardo Hoerhann, who trained directly under the legendary Gracie family including Rilion, Renzo, Ralph, and Royce Gracie.</p>
+                        
+                        <p>This direct lineage ensures that our students receive authentic Brazilian Jiu-Jitsu instruction rooted in the traditional values and techniques passed down through generations of the Gracie family.</p>
+                        
+                        <div class="association-badge">
+                            <img src="assets/images/nlbjja_official_badge.png" alt="Next Level Brazilian Jiu-Jitsu Association" class="badge-image">
+                        </div>
+                    </div>
+                    <div class="instructor-image">
+                        <img src="assets/images/royce_gracie_seminar.jpeg" alt="Professor Tony with Master Royce Gracie" class="seminar-image">
+                        <p class="image-caption">Professor Tony assisting Master Royce Gracie during a seminar</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -84,18 +89,21 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
                 <h2>Our Programs</h2>
                 <div class="programs-grid">
                     <div class="program-card">
+                        <img src="assets/images/bjj_instruction_technique.jpeg" alt="Adult BJJ Classes" class="program-image">
                         <h3>Adult Classes</h3>
                         <p>Our adult program focuses on self-defense, technical development, and physical conditioning for students of all levels, from beginners to advanced practitioners.</p>
                         <a href="#schedule" class="btn btn-outline">View Schedule →</a>
                     </div>
                     
                     <div class="program-card">
+                        <img src="assets/images/nlbjj_main_group_photo.png" alt="Kids BJJ Classes" class="program-image">
                         <h3>Kids Classes</h3>
                         <p>Our kids program teaches discipline, respect, and confidence while developing coordination, strength, and practical self-defense skills in a fun, safe environment.</p>
                         <a href="#schedule" class="btn btn-outline">View Schedule →</a>
                     </div>
                     
                     <div class="program-card">
+                        <img src="assets/images/bjj_instruction_technique.jpeg" alt="Private BJJ Lessons" class="program-image">
                         <h3>Private Lessons</h3>
                         <p>Accelerate your progress with one-on-one instruction tailored to your specific goals, whether you're preparing for competition or focusing on particular techniques.</p>
                         <a href="#contact" class="btn btn-outline">Contact Us →</a>
@@ -104,27 +112,63 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
             </div>
         </section>
 
+        <section id="schedule" class="schedule">
+            <div class="container">
+                <h2>Class Schedule</h2>
+                <div class="schedule-content">
+                    <div class="schedule-info">
+                        <h3>Weekly Schedule</h3>
+                        <div class="schedule-grid">
+                            <div class="schedule-day">
+                                <h4>Monday & Wednesday</h4>
+                                <p><strong>Adult Classes:</strong> 6:00 PM - 7:30 PM</p>
+                                <p><strong>Kids Classes:</strong> 5:00 PM - 6:00 PM</p>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Tuesday & Thursday</h4>
+                                <p><strong>Adult Classes:</strong> 6:00 PM - 7:30 PM</p>
+                                <p><strong>Open Mat:</strong> 7:30 PM - 8:30 PM</p>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Saturday</h4>
+                                <p><strong>All Levels:</strong> 10:00 AM - 11:30 AM</p>
+                                <p><strong>Kids Classes:</strong> 9:00 AM - 10:00 AM</p>
+                            </div>
+                        </div>
+                        <p><strong>Private lessons available by appointment</strong></p>
+                        <a href="#contact" class="btn btn-primary">Schedule Your Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="cta" class="cta">
             <div class="container">
-                <h2>{{ page.cta_title }}</h2>
-                <p>{{ page.cta_text }}</p>
+                <h2>Ready to Start Your Jiu-Jitsu Journey?</h2>
+                <p>Join us at Next Level Jiu-Jitsu Sherman and experience the physical, mental, and social benefits of training in the art of Brazilian Jiu-Jitsu.</p>
                 <a href="#contact" class="btn btn-primary btn-large">Schedule Your Free Trial Class</a>
             </div>
         </section>
 
-        <section id="location" class="location">
+        <section id="contact" class="location">
             <div class="container">
                 <h2>Find Us</h2>
                 <div class="location-content">
                     <div class="location-info">
-                        <h3>{{ page.location_name }}</h3>
+                        <h3>Next Level Jiu-Jitsu Sherman</h3>
                         <address>
-                            {{ page.address_line1 }}<br>
-                            {{ page.address_line2 }}<br>
-                            {{ page.address_line3 }}
+                            4800 Texoma Parkway, Unit 009<br>
+                            Sherman, Texas 75090<br>
+                            Inside Midway Mall
                         </address>
-                        <p>{{ page.location_description }}</p>
-                        <a href="#contact" class="btn btn-primary">Get Directions</a>
+                        <p>Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009.</p>
+                        
+                        <div class="contact-details">
+                            <p><strong>Phone:</strong> <a href="tel:+19031234567">(903) 123-4567</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@nlbjjsherman.com">info@nlbjjsherman.com</a></p>
+                        </div>
+                        
+                        <a href="https://maps.google.com/?q=4800+Texoma+Parkway+Unit+009+Sherman+TX+75090" class="btn btn-primary" target="_blank">Get Directions</a>
                     </div>
                 </div>
             </div>
@@ -133,10 +177,43 @@ location_description: "Conveniently located inside Midway Mall with plenty of pa
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 {{ page.location_name }}. All rights reserved.</p>
-            <p class="made-with">Made with Manus</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/nlbjja_official_badge.png" alt="NLBJJA" class="footer-badge">
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Next Level Jiu-Jitsu Sherman. All rights reserved.</p>
+                    <p>Part of the Next Level Brazilian Jiu-Jitsu Association</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
 

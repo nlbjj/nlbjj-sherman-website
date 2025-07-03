@@ -380,3 +380,197 @@ html {
     outline-offset: 2px;
 }
 
+
+
+/* Instructors Section */
+.instructors {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.instructor-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.instructor-text h3 {
+    color: #dc2626;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.association-badge {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.badge-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.seminar-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Program Images */
+.program-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Schedule Section */
+.schedule {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.schedule-day {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #dc2626;
+}
+
+.schedule-day h4 {
+    color: #dc2626;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.schedule-day p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Contact Details */
+.contact-details {
+    margin: 30px 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-details a {
+    color: #dc2626;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-badge {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instructor-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .seminar-image {
+        height: 250px;
+    }
+    
+    .program-image {
+        height: 180px;
+    }
+    
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .association-badge {
+        margin-top: 20px;
+    }
+    
+    .badge-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Navigation improvements */
+.nav-menu a {
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #dc2626;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
