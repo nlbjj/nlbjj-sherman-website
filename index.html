@@ -1,9 +1,28 @@
+---
+title: "Next Level Jiu-Jitsu Sherman"
+subtitle: "Located inside Midway Mall, unit 009, Sherman, Texas"
+hero_image: ""
+welcome_title: "Welcome to Next Level Jiu-Jitsu Sherman"
+welcome_text: |
+  Next Level Jiu-Jitsu Sherman is proud to be part of the Next Level Brazilian Jiu-Jitsu Association, a worldwide association of instructors and students who share the passion and legacy of traditional Jiu-Jitsu.
+
+  Our Sherman location offers world-class Brazilian Jiu-Jitsu training for all ages and skill levels in a supportive and challenging environment. Whether you're looking to learn self-defense, get in shape, or compete at the highest levels, our experienced instructors will guide you every step of the way.
+quote_text: "The approach to combat and everyday life should be the same."
+quote_author: "Miyamoto Musashi"
+cta_title: "Ready to Start Your Jiu-Jitsu Journey?"
+cta_text: "Join us at Next Level Jiu-Jitsu Sherman and experience the physical, mental, and social benefits of training in the art of Brazilian Jiu-Jitsu."
+location_name: "Next Level Jiu-Jitsu Sherman"
+address_line1: "4800 Texoma Parkway, Unit 009"
+address_line2: "Sherman, Texas 75090"
+address_line3: "Inside Midway Mall"
+location_description: "Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009."
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Level Jiu-Jitsu Sherman</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +31,7 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="assets/logo.svg" alt="Next Level Jiu-Jitsu Sherman" class="logo-img">
+                    <img src="assets/logo.svg" alt="{{ page.title }}" class="logo-img">
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
@@ -28,10 +47,10 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="home" class="hero" {% if page.hero_image %}style="background-image: url('{{ page.hero_image }}')"{% endif %}>
             <div class="hero-content">
-                <h1>Next Level Jiu-Jitsu Sherman</h1>
-                <p class="hero-subtitle">Located inside Midway Mall, unit 009, Sherman, Texas</p>
+                <h1>{{ page.title }}</h1>
+                <p class="hero-subtitle">{{ page.subtitle }}</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Schedule a Free Trial</a>
                     <a href="#schedule" class="btn btn-secondary">View Class Schedule</a>
@@ -42,13 +61,10 @@
 
         <section id="about" class="about">
             <div class="container">
-                <h2>Welcome to Next Level Jiu-Jitsu Sherman</h2>
+                <h2>{{ page.welcome_title }}</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Next Level Jiu-Jitsu Sherman is proud to be part of the Next Level Brazilian Jiu-Jitsu Association, a worldwide association of instructors and students who share the passion and legacy of traditional Jiu-Jitsu.</p>
-                        
-                        <p>Our Sherman location offers world-class Brazilian Jiu-Jitsu training for all ages and skill levels in a supportive and challenging environment. Whether you're looking to learn self-defense, get in shape, or compete at the highest levels, our experienced instructors will guide you every step of the way.</p>
-                        
+                        {{ page.welcome_text | markdownify }}
                         <a href="#about" class="btn btn-primary">Learn More About Us</a>
                     </div>
                     <div class="about-image">
@@ -57,8 +73,8 @@
                 </div>
                 
                 <blockquote class="quote">
-                    <p>"The approach to combat and everyday life should be the same."</p>
-                    <cite>- Miyamoto Musashi</cite>
+                    <p>"{{ page.quote_text }}"</p>
+                    <cite>- {{ page.quote_author }}</cite>
                 </blockquote>
             </div>
         </section>
@@ -90,8 +106,8 @@
 
         <section id="cta" class="cta">
             <div class="container">
-                <h2>Ready to Start Your Jiu-Jitsu Journey?</h2>
-                <p>Join us at Next Level Jiu-Jitsu Sherman and experience the physical, mental, and social benefits of training in the art of Brazilian Jiu-Jitsu.</p>
+                <h2>{{ page.cta_title }}</h2>
+                <p>{{ page.cta_text }}</p>
                 <a href="#contact" class="btn btn-primary btn-large">Schedule Your Free Trial Class</a>
             </div>
         </section>
@@ -101,13 +117,13 @@
                 <h2>Find Us</h2>
                 <div class="location-content">
                     <div class="location-info">
-                        <h3>Next Level Jiu-Jitsu Sherman</h3>
+                        <h3>{{ page.location_name }}</h3>
                         <address>
-                            4800 Texoma Parkway, Unit 009<br>
-                            Sherman, Texas 75090<br>
-                            Inside Midway Mall
+                            {{ page.address_line1 }}<br>
+                            {{ page.address_line2 }}<br>
+                            {{ page.address_line3 }}
                         </address>
-                        <p>Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009.</p>
+                        <p>{{ page.location_description }}</p>
                         <a href="#contact" class="btn btn-primary">Get Directions</a>
                     </div>
                 </div>
@@ -117,7 +133,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Next Level Jiu-Jitsu Sherman. All rights reserved.</p>
+            <p>&copy; 2025 {{ page.location_name }}. All rights reserved.</p>
             <p class="made-with">Made with Manus</p>
         </div>
     </footer>
