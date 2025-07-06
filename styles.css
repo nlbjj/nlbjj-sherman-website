@@ -408,8 +408,8 @@ html {
 }
 
 .badge-image {
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
 }
 
@@ -524,7 +524,7 @@ html {
     }
     
     .seminar-image {
-        height: 250px;
+        height: 350px;
     }
     
     .program-image {
