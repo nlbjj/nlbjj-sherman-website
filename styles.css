@@ -110,8 +110,7 @@ p {
 .responsive-image,
 .lineage-photo,
 .program-image,
-.badge-image,
-.footer-badge {
+.badge-image {
     max-width: 100%;
     height: auto;
     display: block;
@@ -144,11 +143,6 @@ p {
     max-width: 120px;
     height: auto;
     margin: 0 auto 1.5rem;
-}
-
-.footer-badge {
-    max-width: 80px;
-    height: auto;
 }
 
 /* Hero Section */
