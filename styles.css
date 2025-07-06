@@ -108,7 +108,7 @@ p {
 
 /* Responsive Images - MAIN FIX */
 .responsive-image,
-.instructor-photo,
+.lineage-photo,
 .program-image,
 .badge-image,
 .footer-badge {
@@ -139,46 +139,11 @@ p {
     transform: scale(1.05);
 }
 
-/* Instructor photos - FIXED SIZING */
-.instructor-photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.photo-container {
-    text-align: center;
-}
-
-.instructor-photo {
-    width: 100%;
-    max-width: 350px;
-    height: 280px;
-    object-fit: cover;
-    object-position: center;
-    margin: 0 auto 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.instructor-photo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.photo-caption {
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
-    margin-top: 0.5rem;
-}
-
 /* Badge images */
 .badge-image {
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
 }
 
 .footer-badge {
@@ -310,24 +275,67 @@ section {
     color: #666;
 }
 
-/* Instructors Section */
+/* Instructors Section - NEW LAYOUT */
 .instructors {
     background: white;
 }
 
-.instructor-content {
+.lineage-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
 }
 
+.lineage-text {
+    font-size: 1.1rem;
+}
+
 .lineage-images {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .association-badge {
-    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.lineage-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.photo-container {
+    text-align: center;
+}
+
+.lineage-photo {
+    width: 100%;
+    max-width: 200px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.lineage-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photo-caption {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+    line-height: 1.3;
 }
 
 /* Programs Section */
@@ -490,19 +498,23 @@ section {
     }
 
     .about-content,
-    .instructor-content {
+    .lineage-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .instructor-photos {
+    .lineage-images {
+        order: -1; /* Show images above text on mobile */
+    }
+
+    .lineage-photos {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .instructor-photo {
-        max-width: 300px;
-        height: 250px;
+    .lineage-photo {
+        max-width: 250px;
+        height: 200px;
     }
 
     .programs-grid {
@@ -540,13 +552,13 @@ section {
         padding: 100px 0 60px;
     }
 
-    .instructor-photo {
-        max-width: 280px;
-        height: 220px;
+    .lineage-photo {
+        max-width: 220px;
+        height: 180px;
     }
 
     .badge-image {
-        max-width: 120px;
+        max-width: 100px;
     }
 
     .btn {
@@ -560,6 +572,10 @@ section {
 
     .schedule-day {
         padding: 1.5rem;
+    }
+
+    .photo-caption {
+        font-size: 0.8rem;
     }
 }
 
