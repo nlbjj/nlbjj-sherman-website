@@ -14,6 +14,11 @@
                 <div class="logo">
                     <img src="assets/images/logo-next-level-transparent.png" alt="Next Level Jiu-Jitsu Sherman, TX" class="logo-img">
                 </div>
+                <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -228,9 +233,10 @@
         // Mobile menu toggle (if needed)
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        
-        if (navToggle) {
+        if (navToggle && navMenu) {
             navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !expanded);
                 navMenu.classList.toggle('active');
             });
         }
