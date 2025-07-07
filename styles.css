@@ -392,8 +392,15 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
     margin-top: 40px;
+}
+
+.instructor-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
 .instructor-text h3 {
@@ -521,6 +528,11 @@ html {
     .instructor-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    
+    .instructor-images {
+        flex-direction: column;
+        gap: 20px;
     }
     
     .seminar-image {
