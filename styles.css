@@ -384,23 +384,55 @@ html {
 
 /* Instructors Section */
 .instructors {
-    padding: 80px 0;
+    padding: 40px 0 80px;
     background-color: #f8f9fa;
 }
 
-.instructor-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-top: 40px;
+.instructors h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.instructor-images {
+.instruction-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.instruction-text {
+    flex: 1;
+}
+
+.instruction-image {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
+    gap: 20px;
+}
+
+.lineage-portrait {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.instructor-content {
+    margin-bottom: 60px;
+}
+
+.instructor-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .instructor-text h3 {
@@ -410,8 +442,8 @@ html {
 }
 
 .association-badge {
-    margin-top: 30px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .badge-image {
@@ -525,14 +557,22 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .instructor-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .instruction-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
     }
     
-    .instructor-images {
+    .lineage-portrait {
+        width: 180px;
+        height: 250px;
+    }
+    
+    .instructor-gallery {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        gap: 40px;
     }
     
     .seminar-image {
