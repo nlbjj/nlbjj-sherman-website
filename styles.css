@@ -40,8 +40,10 @@ body {
 }
 
 .logo-img {
-    height: 50px;
+    height: 70px;
     width: auto;
+    mix-blend-mode: multiply;
+    filter: contrast(1.1);
 }
 
 .nav-menu {
