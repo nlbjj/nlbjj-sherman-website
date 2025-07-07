@@ -25,7 +25,7 @@
                     <li><a href="#instructors">Instructors</a></li>
                     <li><a href="#programs">Programs</a></li>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -174,25 +174,78 @@
             </div>
         </section>
 
-        <section id="contact" class="location">
+        <section id="contact" class="contact">
             <div class="container">
-                <h2>Find Us</h2>
-                <div class="location-content">
-                    <div class="location-info">
-                        <h3>Next Level Jiu-Jitsu Sherman</h3>
-                        <address>
-                            4800 Texoma Parkway, Unit B009<br>
-                            Sherman, Texas 75090<br>
-                            Inside Midway Mall
-                        </address>
-                        <p>Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009.</p>
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-form-section">
+                        <h3>Get Started Today</h3>
+                        <p>Interested in joining our classes? Fill out the form below and we'll get back to you within 24 hours to schedule your free trial class.</p>
                         
-                        <div class="contact-details">
-                            <p><strong>Phone:</strong> <a href="tel:+14302020232">(430) 202-0232‬</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:contact@nlbjj.com">contact@nlbjj.com</a></p>
+                        <form action="https://formspree.io/f/xblyvdrj" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interest">Interested In *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Select a program</option>
+                                    <option value="Adult Classes">Adult Classes</option>
+                                    <option value="Kids Classes">Kids Classes</option>
+                                    <option value="Private Lessons">Private Lessons</option>
+                                    <option value="All Programs">All Programs</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="experience">Experience Level</label>
+                                <select id="experience" name="experience">
+                                    <option value="">Select experience level</option>
+                                    <option value="Complete Beginner">Complete Beginner</option>
+                                    <option value="Some Martial Arts Experience">Some Martial Arts Experience</option>
+                                    <option value="Other BJJ Experience">Other BJJ Experience</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message (Optional)</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals, any questions you have, or preferred class times..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-section">
+                        <h3>Visit Our Academy</h3>
+                        <div class="location-info">
+                            <h4>Next Level Jiu-Jitsu Sherman</h4>
+                            <address>
+                                4800 Texoma Parkway, Unit B009<br>
+                                Sherman, Texas 75090<br>
+                                Inside Midway Mall
+                            </address>
+                            <p>Conveniently located inside Midway Mall with plenty of parking available. Enter through the main mall entrance and look for our unit #009.</p>
+                            
+                            <div class="contact-details">
+                                <p><strong>Phone:</strong> <a href="tel:+14302020232">(430) 202-0232‬</a></p>
+                                <p><strong>Email:</strong> <a href="mailto:contact@nlbjj.com">contact@nlbjj.com</a></p>
+                            </div>
+                            
+                            <a href="https://maps.google.com/?q=4800+Texoma+Parkway+Unit+B009+Sherman+TX+75090" class="btn btn-outline" target="_blank">Get Directions</a>
                         </div>
-                        
-                        <a href="https://maps.google.com/?q=4800+Texoma+Parkway+Unit+B009+Sherman+TX+75090" class="btn btn-primary" target="_blank">Get Directions</a>
                     </div>
                 </div>
             </div>
