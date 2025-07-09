@@ -1291,3 +1291,28 @@ section {
     font-weight: 600;
 }
 
+/* Prominent Instagram link styles */
+.prominent-instagram {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E1306C; /* Instagram pink */
+  text-decoration: none;
+  margin-top: 0.5em;
+  transition: color 0.2s;
+}
+.prominent-instagram svg {
+  margin-right: 0.5em;
+  stroke: #E1306C;
+  transition: stroke 0.2s;
+}
+.prominent-instagram:hover,
+.prominent-instagram:focus {
+  color: #C13584; /* Instagram purple */
+}
+.prominent-instagram:hover svg,
+.prominent-instagram:focus svg {
+  stroke: #C13584;
+}
+
