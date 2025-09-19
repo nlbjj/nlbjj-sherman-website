@@ -2195,7 +2195,7 @@ section {
     font-weight: 500;
 }
 
-.post-title {
+.blog-post-hero .post-title {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -2436,7 +2436,7 @@ section {
         padding: 120px 0 60px;
     }
     
-    .post-title {
+    .blog-post-hero .post-title {
         font-size: 2.2rem;
     }
     
@@ -2524,7 +2524,7 @@ section {
         padding: 100px 0 50px;
     }
     
-    .post-title {
+    .blog-post-hero .post-title {
         font-size: 1.8rem;
     }
     
