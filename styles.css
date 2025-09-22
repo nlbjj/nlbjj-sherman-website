@@ -2287,6 +2287,150 @@ section {
     font-size: 1.1rem;
 }
 
+.events-cta {
+    margin-top: 20px;
+}
+
+/* Grand Opening Decoration Styles */
+.grand-opening-decoration {
+    position: relative;
+}
+
+.decoration-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 15px;
+    border: 2px solid #e5e7eb;
+}
+
+.decoration-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2) brightness(0.9);
+}
+
+.decoration-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.decoration-bottom {
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 15px;
+    border: 2px solid #e5e7eb;
+}
+
+.decoration-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.decoration-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%) contrast(1.1) brightness(0.9);
+    transition: transform 0.3s ease;
+}
+
+.decoration-image:hover {
+    transform: scale(1.05);
+}
+
+.decoration-quote {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #dc2626;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Event Card Decoration Styles */
+.event-decoration-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.event-decoration-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2) brightness(0.9);
+}
+
+.event-decoration-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-decoration-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.event-decoration-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.event-decoration-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%) contrast(1.1) brightness(0.9);
+    transition: transform 0.3s ease;
+}
+
+.event-decoration-image:hover {
+    transform: scale(1.05);
+}
+
+.event-decoration-quote {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #dc2626;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Responsive Design for Events */
 @media (max-width: 768px) {
     .events {
