@@ -3697,7 +3697,7 @@ section {
     margin-bottom: 40px;
 }
 
-.join-requirements {
+.join-requirements, .join-note {
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -3706,7 +3706,12 @@ section {
     text-align: left;
 }
 
-.join-requirements h3 {
+.join-note {
+    border-left: 4px solid #dc2626;
+    background: #fef2f2;
+}
+
+.join-requirements h3, .join-note h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
