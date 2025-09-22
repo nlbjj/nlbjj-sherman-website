@@ -175,7 +175,7 @@ body {
     bottom: 0;
     background-image: url('assets/seminars/besancon-seminar/besancon-seminar-1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 15%;
     background-attachment: fixed;
     filter: grayscale(100%) contrast(1.4) brightness(0.7);
     z-index: -1;
@@ -466,6 +466,7 @@ body {
     width: 100%;
     height: 450px;
     object-fit: cover;
+    object-position: center 15%;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -3258,6 +3259,7 @@ section {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    object-position: center 20%;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     filter: grayscale(100%) contrast(1.1) brightness(0.9);
