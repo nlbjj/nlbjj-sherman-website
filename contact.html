@@ -145,6 +145,19 @@
                 navMenu.classList.toggle('active');
             });
         }
+
+        // Handle newsletter signup from blog page
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const newsletter = urlParams.get('newsletter');
+            const email = urlParams.get('email');
+            
+            if (newsletter === 'signup' && email) {
+                // Redirect to ZenPlanner contact form with pre-filled newsletter signup
+                const zenplannerUrl = `https://nlbjj.sites.zenplanner.com/contact.cfm?newsletter=signup&email=${encodeURIComponent(email)}`;
+                window.location.href = zenplannerUrl;
+            }
+        });
     </script>
 </body>
 </html> 

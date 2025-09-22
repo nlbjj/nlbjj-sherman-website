@@ -348,9 +348,10 @@
             newsletterForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const email = newsletterForm.querySelector('.newsletter-input').value;
-                // Implement newsletter signup
-                alert('Thank you for subscribing!');
-                newsletterForm.reset();
+                
+                // Redirect to ZenPlanner contact form with newsletter signup
+                // This will create a lead in your ZenPlanner system
+                window.location.href = 'https://nlbjj.sites.zenplanner.com/contact.cfm?newsletter=signup&email=' + encodeURIComponent(email);
             });
         }
 
