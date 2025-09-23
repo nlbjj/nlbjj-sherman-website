@@ -208,50 +208,8 @@ artic
                         <h3>Get Started Today</h3>
                         <p>Interested in joining our classes? Fill out the form below and we'll get back to you within 24 hours to schedule your free tour.</p>
                         
-                        <form action="https://formspree.io/f/xblyvdrj" method="POST" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="interest">Interested In *</label>
-                                <select id="interest" name="interest" required>
-                                    <option value="">Select a program</option>
-                                    <option value="Adult Classes">Adult Classes</option>
-                                    <option value="Kids Classes">Kids Classes</option>
-                                    <option value="Private Lessons">Private Lessons</option>
-                                    <option value="All Programs">All Programs</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="experience">Experience Level</label>
-                                <select id="experience" name="experience">
-                                    <option value="">Select experience level</option>
-                                    <option value="Complete Beginner">Complete Beginner</option>
-                                    <option value="Some Martial Arts Experience">Some Martial Arts Experience</option>
-                                    <option value="Other BJJ Experience">Other BJJ Experience</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message (Optional)</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals, any questions you have, or preferred class times..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
+                        <div id="leadcapture_cae4901e-bb67-424a-9bf5-35e20596ca6f"></div>
+                        <script type="text/javascript">(function(win, doc, zenJSHost, src, module, partitionApiKey, widgetInstanceId) { win.zenplanner = win.zenplanner || {}; win.zenplanner.directLoadArgs = win.zenplanner.directLoadArgs || []; var tryCount = 0, intervalId = null; function afterLoad() { if (win.zenplanner.directLoader !== undefined && window.zenplanner.directLoader !== null) { clearInterval(intervalId); for (var i = 0, l = win.zenplanner.directLoadArgs.length; l > i; i++) { if (win.zenplanner.directLoadArgs[i].widgetInstanceId === widgetInstanceId) { win.zenplanner.directLoader.loadWidget(zenJSHost, module, partitionApiKey, widgetInstanceId); } } } else if (tryCount++ > 200) { console.log('Zen Planner widget : ' + module + ', failed to load.'); clearInterval(intervalId); } } if (win.zenplanner.directLoader === undefined || win.zenplanner.directLoader === null) { win.zenplanner.directLoadArgs.push({ module: module, partitionApiKey: partitionApiKey, widgetInstanceId: widgetInstanceId }); var s = doc.createElement('script'); s.async = 1; s.src = zenJSHost + '/' + src; doc.head.appendChild(s); intervalId = setInterval(afterLoad, 50); } else { win.zenplanner.directLoader.loadWidget(zenJSHost, module, partitionApiKey, widgetInstanceId); } })( window, document, 'https://studio.zenplanner.com', 'zenplanner/studio/target/zp-widget-direct.js', 'leadcapture', 'ef3dee75-36e7-472a-9560-4202df849ce6', 'cae4901e-bb67-424a-9bf5-35e20596ca6f' ); </script>
                     </div>
                     
                     <div class="contact-info-section">
@@ -337,6 +295,173 @@ artic
                 }
             });
         }
+
+        // Enhanced ZenPlanner form styling for homepage
+        function enhanceHomepageZenPlannerForm() {
+            const formContainer = document.getElementById('leadcapture_cae4901e-bb67-424a-9bf5-35e20596ca6f');
+            if (!formContainer) return;
+
+            // Apply container styling with conservative scaling
+            formContainer.style.cssText = `
+                min-height: 600px !important;
+                width: 100% !important;
+                padding: 20px !important;
+                background: #f9fafb !important;
+                border-radius: 12px !important;
+                border: 1px solid #e5e7eb !important;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+                transform: scale(1.1) !important;
+                transform-origin: center top !important;
+                margin-bottom: 50px !important;
+                overflow: hidden !important;
+            `;
+
+            // Try to find and scale iframe
+            const iframe = formContainer.querySelector('iframe');
+            if (iframe) {
+                iframe.style.cssText = `
+                    width: 100% !important;
+                    height: 600px !important;
+                    border: none !important;
+                    transform: scale(1.1) !important;
+                    transform-origin: center top !important;
+                `;
+                
+                // Try to access iframe content (may be blocked by CORS)
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (iframeDoc) {
+                        const style = iframeDoc.createElement('style');
+                        style.textContent = `
+                            body { font-size: 18px !important; }
+                            input, select, textarea { 
+                                font-size: 18px !important; 
+                                padding: 16px !important; 
+                                width: 100% !important;
+                            }
+                            button, input[type="submit"] { 
+                                font-size: 20px !important; 
+                                padding: 20px !important; 
+                                width: 100% !important;
+                            }
+                        `;
+                        iframeDoc.head.appendChild(style);
+                    }
+                } catch (e) {
+                    console.log('Cannot access iframe content (CORS restriction)');
+                }
+            }
+
+            // Wait for form elements to load and style them
+            const styleFormElements = () => {
+                const inputs = formContainer.querySelectorAll('input, select, textarea');
+                const labels = formContainer.querySelectorAll('label');
+                const buttons = formContainer.querySelectorAll('button, input[type="submit"], input[type="button"]');
+
+                // Style inputs
+                inputs.forEach(input => {
+                    input.style.cssText = `
+                        font-size: 18px !important;
+                        padding: 16px 20px !important;
+                        border: 2px solid #d1d5db !important;
+                        border-radius: 10px !important;
+                        width: 100% !important;
+                        margin-bottom: 20px !important;
+                        transition: all 0.3s ease !important;
+                        background: white !important;
+                        box-sizing: border-box !important;
+                    `;
+                });
+
+                // Style labels
+                labels.forEach(label => {
+                    label.style.cssText = `
+                        font-size: 18px !important;
+                        font-weight: 700 !important;
+                        color: #1f2937 !important;
+                        margin-bottom: 12px !important;
+                        display: block !important;
+                        line-height: 1.4 !important;
+                    `;
+                });
+
+                // Style buttons
+                buttons.forEach(button => {
+                    button.style.cssText = `
+                        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+                        color: white !important;
+                        border: none !important;
+                        padding: 20px 40px !important;
+                        font-size: 20px !important;
+                        font-weight: 700 !important;
+                        border-radius: 12px !important;
+                        cursor: pointer !important;
+                        transition: all 0.3s ease !important;
+                        width: 100% !important;
+                        margin-top: 30px !important;
+                        text-transform: uppercase !important;
+                        letter-spacing: 0.5px !important;
+                    `;
+                });
+
+                // Add focus effects
+                inputs.forEach(input => {
+                    input.addEventListener('focus', function() {
+                        this.style.borderColor = '#dc2626';
+                        this.style.outline = 'none';
+                        this.style.boxShadow = '0 0 0 4px rgba(220, 38, 38, 0.15)';
+                        this.style.transform = 'translateY(-1px)';
+                    });
+                    
+                    input.addEventListener('blur', function() {
+                        this.style.borderColor = '#d1d5db';
+                        this.style.boxShadow = 'none';
+                        this.style.transform = 'translateY(0)';
+                    });
+                });
+
+                // Add hover effects for buttons
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-3px)';
+                        this.style.boxShadow = '0 10px 30px rgba(220, 38, 38, 0.4)';
+                    });
+                    
+                    button.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0)';
+                        this.style.boxShadow = 'none';
+                    });
+                });
+            };
+
+            // Try to style immediately
+            styleFormElements();
+
+            // Also try after a delay to catch dynamically loaded content
+            setTimeout(styleFormElements, 1000);
+            setTimeout(styleFormElements, 3000);
+            setTimeout(styleFormElements, 5000);
+
+            // Use MutationObserver to catch when new elements are added
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length > 0) {
+                        styleFormElements();
+                    }
+                });
+            });
+
+            observer.observe(formContainer, {
+                childList: true,
+                subtree: true
+            });
+        }
+
+        // Run the enhancement function for homepage
+        document.addEventListener('DOMContentLoaded', enhanceHomepageZenPlannerForm);
+        
+        // Also run it after a delay to catch late-loading content
+        setTimeout(enhanceHomepageZenPlannerForm, 2000);
 
     </script>
 </body>
