@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading List - Next Level Jiu-Jitsu Sherman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/logo-next-level-transparent.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/images/logo-next-level-transparent.png" alt="Next Level Jiu-Jitsu Sherman" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Next Level Jiu-Jitsu</h1>
+                        <p>Sherman, TX</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="reading-list.html" class="active">My Reading List</a></li>
+                    </ul>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1>My Reading List</h1>
+                    <p>Your saved articles and reading progress</p>
+                </div>
+            </section>
+
+            <!-- Reading List Content -->
+            <section class="reading-list-section">
+                <div class="reading-list-container">
+                    <!-- Stats Overview -->
+                    <div class="reading-stats" style="background: #f9fafb; padding: 30px; border-radius: 12px; margin-bottom: 30px; border: 1px solid #e5e7eb;">
+                        <h2 style="margin-bottom: 20px; color: #1f2937;">Your Reading Journey</h2>
+                        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                            <div class="stat-item" style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 1px solid #e5e7eb;">
+                                <div class="stat-number" id="total-bookmarks" style="font-size: 2rem; font-weight: bold; color: #dc2626;">0</div>
+                                <div class="stat-label" style="color: #6b7280; margin-top: 5px;">Articles Saved</div>
+                            </div>
+                            <div class="stat-item" style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 1px solid #e5e7eb;">
+                                <div class="stat-number" id="total-reactions" style="font-size: 2rem; font-weight: bold; color: #dc2626;">0</div>
+                                <div class="stat-label" style="color: #6b7280; margin-top: 5px;">Total Reactions</div>
+                            </div>
+                            <div class="stat-item" style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 1px solid #e5e7eb;">
+                                <div class="stat-number" id="total-comments" style="font-size: 2rem; font-weight: bold; color: #dc2626;">0</div>
+                                <div class="stat-label" style="color: #6b7280; margin-top: 5px;">Comments Made</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bookmarked Articles -->
+                    <div class="bookmarked-articles">
+                        <h2 style="margin-bottom: 20px; color: #1f2937;">Saved Articles</h2>
+                        <div id="bookmarked-list" class="articles-list">
+                            <div class="no-bookmarks" style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
+                                <div style="font-size: 3rem; margin-bottom: 15px;">📚</div>
+                                <h3>No articles saved yet</h3>
+                                <p>Start reading our blog and save articles you want to read later!</p>
+                                <a href="blog.html" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Browse Articles</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reading Progress -->
+                    <div class="reading-progress-section" style="margin-top: 40px;">
+                        <h2 style="margin-bottom: 20px; color: #1f2937;">Reading Progress</h2>
+                        <div id="progress-list" class="progress-list">
+                            <!-- Progress items will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions" style="margin-top: 40px; padding: 30px; background: #f9fafb; border-radius: 12px; border: 1px solid #e5e7eb;">
+                        <h3 style="margin-bottom: 20px; color: #1f2937;">Quick Actions</h3>
+                        <div class="action-buttons" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <button id="clear-all-bookmarks" class="btn btn-outline" style="padding: 10px 20px;">
+                                🗑️ Clear All Bookmarks
+                            </button>
+                            <button id="export-reading-list" class="btn btn-outline" style="padding: 10px 20px;">
+                                📤 Export Reading List
+                            </button>
+                            <button id="refresh-stats" class="btn btn-primary" style="padding: 10px 20px;">
+                                🔄 Refresh Stats
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Next Level Jiu-Jitsu</h3>
+                    <p>Authentic Brazilian Jiu-Jitsu instruction in Sherman, Texas. Learn from instructors trained by Master Rilion Gracie.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="reading-list.html">My Reading List</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 Sherman, Texas</p>
+                    <p>📞 (903) 555-0123</p>
+                    <p>✉️ info@nlbjjsherman.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Next Level Jiu-Jitsu Sherman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reading List Management System
+        function initReadingList() {
+            const bookmarkedList = document.getElementById('bookmarked-list');
+            const progressList = document.getElementById('progress-list');
+            const totalBookmarks = document.getElementById('total-bookmarks');
+            const totalReactions = document.getElementById('total-reactions');
+            const totalComments = document.getElementById('total-comments');
+            
+            // Article data
+            const articles = [
+                {
+                    id: 'blog-post-1',
+                    title: 'Mastering the Armbar: A Complete Guide',
+                    excerpt: 'Learn the fundamentals of the armbar technique, one of the most effective submissions in Brazilian Jiu-Jitsu.',
+                    url: 'blog-post-1.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                },
+                {
+                    id: 'blog-post-2',
+                    title: 'The Importance of Fundamentals',
+                    excerpt: 'Why mastering the basics is crucial for your BJJ journey and long-term success.',
+                    url: 'blog-post-2.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                },
+                {
+                    id: 'blog-post-3',
+                    title: 'Building Mental Toughness',
+                    excerpt: 'Develop the mental resilience needed to excel in Brazilian Jiu-Jitsu.',
+                    url: 'blog-post-3.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                },
+                {
+                    id: 'blog-post-4',
+                    title: 'Nutrition for BJJ Athletes',
+                    excerpt: 'Fuel your training with the right nutrition strategies for optimal performance.',
+                    url: 'blog-post-4.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                },
+                {
+                    id: 'blog-post-5',
+                    title: 'The Gracie Lineage: A Legacy of Excellence',
+                    excerpt: 'Explore the rich history and lineage of the Gracie family in Brazilian Jiu-Jitsu.',
+                    url: 'blog-post-5.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                },
+                {
+                    id: 'blog-post-6',
+                    title: 'Competition Preparation',
+                    excerpt: 'Get ready for your next BJJ tournament with these essential preparation tips.',
+                    url: 'blog-post-6.html',
+                    image: 'assets/images/bjj_instruction_technique.webp'
+                }
+            ];
+            
+            function loadBookmarkedArticles() {
+                const bookmarkedArticles = [];
+                
+                articles.forEach(article => {
+                    const isBookmarked = localStorage.getItem(`bookmark_${article.id}`) === 'true';
+                    if (isBookmarked) {
+                        bookmarkedArticles.push(article);
+                    }
+                });
+                
+                if (bookmarkedArticles.length === 0) {
+                    bookmarkedList.innerHTML = `
+                        <div class="no-bookmarks" style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
+                            <div style="font-size: 3rem; margin-bottom: 15px;">📚</div>
+                            <h3>No articles saved yet</h3>
+                            <p>Start reading our blog and save articles you want to read later!</p>
+                            <a href="blog.html" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Browse Articles</a>
+                        </div>
+                    `;
+                } else {
+                    bookmarkedList.innerHTML = bookmarkedArticles.map(article => `
+                        <div class="article-card" style="display: flex; gap: 20px; padding: 20px; background: white; border-radius: 12px; border: 1px solid #e5e7eb; margin-bottom: 20px; transition: all 0.3s ease;">
+                            <img src="${article.image}" alt="${article.title}" style="width: 120px; height: 80px; object-fit: cover; border-radius: 8px;">
+                            <div class="article-content" style="flex: 1;">
+                                <h3 style="margin-bottom: 10px; color: #1f2937;">${article.title}</h3>
+                                <p style="color: #6b7280; margin-bottom: 15px; line-height: 1.5;">${article.excerpt}</p>
+                                <div class="article-actions" style="display: flex; gap: 10px; align-items: center;">
+                                    <a href="${article.url}" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Read Article</a>
+                                    <button class="remove-bookmark-btn" data-article-id="${article.id}" style="padding: 8px 12px; background: #ef4444; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+                                        🗑️ Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+                
+                // Add event listeners to remove buttons
+                document.querySelectorAll('.remove-bookmark-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const articleId = e.target.getAttribute('data-article-id');
+                        localStorage.setItem(`bookmark_${articleId}`, 'false');
+                        loadBookmarkedArticles();
+                        updateStats();
+                    });
+                });
+            }
+            
+            function loadReadingProgress() {
+                const progressItems = [];
+                
+                articles.forEach(article => {
+                    const isBookmarked = localStorage.getItem(`bookmark_${article.id}`) === 'true';
+                    if (isBookmarked) {
+                        // Simulate reading progress (in a real app, this would be tracked)
+                        const progress = Math.floor(Math.random() * 100);
+                        progressItems.push({...article, progress});
+                    }
+                });
+                
+                if (progressItems.length === 0) {
+                    progressList.innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📖</div>
+                            <p>No reading progress to show yet</p>
+                        </div>
+                    `;
+                } else {
+                    progressList.innerHTML = progressItems.map(item => `
+                        <div class="progress-item" style="padding: 20px; background: white; border-radius: 8px; border: 1px solid #e5e7eb; margin-bottom: 15px;">
+                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 10px;">
+                                <h4 style="color: #1f2937; margin: 0;">${item.title}</h4>
+                                <span style="color: #6b7280; font-size: 0.9rem;">${item.progress}%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden;">
+                                <div style="height: 100%; background: #dc2626; width: ${item.progress}%; transition: width 0.3s ease;"></div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            }
+            
+            function updateStats() {
+                let bookmarkCount = 0;
+                let reactionCount = 0;
+                let commentCount = 0;
+                
+                articles.forEach(article => {
+                    // Count bookmarks
+                    if (localStorage.getItem(`bookmark_${article.id}`) === 'true') {
+                        bookmarkCount++;
+                    }
+                    
+                    // Count reactions
+                    ['like', 'love', 'insightful', 'applause'].forEach(reaction => {
+                        const count = parseInt(localStorage.getItem(`reactions_${article.id}_${reaction}`)) || 0;
+                        reactionCount += count;
+                    });
+                    
+                    // Count comments
+                    const comments = JSON.parse(localStorage.getItem(`comments_${article.id}`)) || [];
+                    commentCount += comments.length;
+                });
+                
+                totalBookmarks.textContent = bookmarkCount;
+                totalReactions.textContent = reactionCount;
+                totalComments.textContent = commentCount;
+            }
+            
+            // Clear all bookmarks
+            document.getElementById('clear-all-bookmarks').addEventListener('click', () => {
+                if (confirm('Are you sure you want to clear all bookmarks? This action cannot be undone.')) {
+                    articles.forEach(article => {
+                        localStorage.setItem(`bookmark_${article.id}`, 'false');
+                    });
+                    loadBookmarkedArticles();
+                    loadReadingProgress();
+                    updateStats();
+                }
+            });
+            
+            // Export reading list
+            document.getElementById('export-reading-list').addEventListener('click', () => {
+                const bookmarkedArticles = articles.filter(article => 
+                    localStorage.getItem(`bookmark_${article.id}`) === 'true'
+                );
+                
+                if (bookmarkedArticles.length === 0) {
+                    alert('No bookmarked articles to export.');
+                    return;
+                }
+                
+                const exportData = {
+                    exported: new Date().toISOString(),
+                    articles: bookmarkedArticles.map(article => ({
+                        title: article.title,
+                        url: window.location.origin + '/' + article.url,
+                        excerpt: article.excerpt
+                    }))
+                };
+                
+                const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'my-reading-list.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+            
+            // Refresh stats
+            document.getElementById('refresh-stats').addEventListener('click', () => {
+                updateStats();
+                loadBookmarkedArticles();
+                loadReadingProgress();
+            });
+            
+            // Initialize everything
+            loadBookmarkedArticles();
+            loadReadingProgress();
+            updateStats();
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initReadingList);
+        
+        // Mobile navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !expanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
