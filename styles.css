@@ -1811,6 +1811,177 @@ section {
     font-size: 1.1rem;
 }
 
+/* ZenPlanner Form Styling - Enhanced Approach */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 {
+    min-height: 600px !important;
+    width: 100% !important;
+    padding: 20px !important;
+    background: #f9fafb !important;
+    border-radius: 12px !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* Target iframe specifically with better scaling */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 iframe {
+    width: 100% !important;
+    height: 600px !important;
+    border: none !important;
+    transform: scale(1.15) !important;
+    transform-origin: top left !important;
+}
+
+/* Alternative approach - scale the container but adjust positioning */
+.contact-form-section {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Ensure the form section can accommodate the scaled content */
+.contact-form-section #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 {
+    transform: scale(1.1) !important;
+    transform-origin: center top !important;
+    margin-bottom: 50px !important;
+}
+
+/* Homepage ZenPlanner Form Styling */
+#leadcapture_cae4901e-bb67-424a-9bf5-35e20596ca6f {
+    min-height: 600px !important;
+    width: 100% !important;
+    padding: 20px !important;
+    background: #f9fafb !important;
+    border-radius: 12px !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transform: scale(1.1) !important;
+    transform-origin: center top !important;
+    margin-bottom: 50px !important;
+}
+
+/* Target homepage iframe specifically */
+#leadcapture_cae4901e-bb67-424a-9bf5-35e20596ca6f iframe {
+    width: 100% !important;
+    height: 600px !important;
+    border: none !important;
+    transform: scale(1.1) !important;
+    transform-origin: center top !important;
+}
+
+/* Target all possible ZenPlanner containers */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 iframe,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 form,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 div[class*="form"],
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 div[class*="widget"] {
+    width: 100% !important;
+    min-height: 500px !important;
+    border: none !important;
+}
+
+/* Universal form element targeting */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 select,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 textarea {
+    font-size: 18px !important;
+    padding: 16px 20px !important;
+    border: 2px solid #d1d5db !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    transition: all 0.3s ease !important;
+    background: white !important;
+    box-sizing: border-box !important;
+}
+
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input:focus,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 select:focus,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 textarea:focus {
+    border-color: #dc2626 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Target all labels */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 label {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+    line-height: 1.4 !important;
+}
+
+/* Target all buttons */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 button,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input[type="submit"],
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input[type="button"] {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 20px 40px !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    margin-top: 30px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 button:hover,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input[type="submit"]:hover,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input[type="button"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* Target any form containers */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .form-container,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .zp-form,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .zenplanner-form,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 [class*="form"] {
+    padding: 30px !important;
+    background: white !important;
+    border-radius: 15px !important;
+    border: 2px solid #e5e7eb !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Target form fields with more specific selectors */
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .form-field,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .field,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 .input-group,
+#leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 [class*="field"] {
+    margin-bottom: 25px !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 {
+        min-height: 500px !important;
+        padding: 15px !important;
+    }
+    
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input,
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 select,
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 textarea {
+        font-size: 16px !important;
+        padding: 18px 20px !important;
+    }
+    
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 button,
+    #leadcapture_f5d9f6f2-566f-4df5-a895-cfcecb2cb069 input[type="submit"] {
+        padding: 18px 30px !important;
+        font-size: 18px !important;
+    }
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
