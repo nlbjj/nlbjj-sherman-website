@@ -262,10 +262,8 @@
                         <div class="sidebar-widget newsletter-widget">
                             <h3>Stay Updated</h3>
                             <p>Get the latest blog posts and training tips delivered to your inbox.</p>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" class="newsletter-input" required>
-                                <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
-                            </form>
+                            <div id="leadcapture_10e567d0-6207-4f18-aa51-75d3ac0c3802"></div>
+                            <script type="text/javascript">(function(win, doc, zenJSHost, src, module, partitionApiKey, widgetInstanceId) { win.zenplanner = win.zenplanner || {}; win.zenplanner.directLoadArgs = win.zenplanner.directLoadArgs || []; var tryCount = 0, intervalId = null; function afterLoad() { if (win.zenplanner.directLoader !== undefined && window.zenplanner.directLoader !== null) { clearInterval(intervalId); for (var i = 0, l = win.zenplanner.directLoadArgs.length; l > i; i++) { if (win.zenplanner.directLoadArgs[i].widgetInstanceId === widgetInstanceId) { win.zenplanner.directLoader.loadWidget(zenJSHost, module, partitionApiKey, widgetInstanceId); } } } else if (tryCount++ > 200) { console.log('Zen Planner widget : ' + module + ', failed to load.'); clearInterval(intervalId); } } if (win.zenplanner.directLoader === undefined || win.zenplanner.directLoader === null) { win.zenplanner.directLoadArgs.push({ module: module, partitionApiKey: partitionApiKey, widgetInstanceId: widgetInstanceId }); var s = doc.createElement('script'); s.async = 1; s.src = zenJSHost + '/' + src; doc.head.appendChild(s); intervalId = setInterval(afterLoad, 50); } else { win.zenplanner.directLoader.loadWidget(zenJSHost, module, partitionApiKey, widgetInstanceId); } })( window, document, 'https://studio.zenplanner.com', 'zenplanner/studio/target/zp-widget-direct.js', 'leadcapture', 'ef3dee75-36e7-472a-9560-4202df849ce6', '10e567d0-6207-4f18-aa51-75d3ac0c3802' ); </script>
                         </div>
 
                         <!-- Social Media Widget -->
@@ -342,18 +340,7 @@
             });
         }
 
-        // Newsletter signup
-        const newsletterForm = document.querySelector('.newsletter-form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = newsletterForm.querySelector('.newsletter-input').value;
-                
-                // Redirect to ZenPlanner contact form with newsletter signup
-                // This will create a lead in your ZenPlanner system
-                window.location.href = 'https://nlbjj.sites.zenplanner.com/contact.cfm?newsletter=signup&email=' + encodeURIComponent(email);
-            });
-        }
+        // Newsletter signup is now handled by ZenPlanner embedded form
 
         // Header scroll effect
         const header = document.querySelector('.header');

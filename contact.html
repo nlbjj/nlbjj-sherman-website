@@ -153,9 +153,33 @@
             const email = urlParams.get('email');
             
             if (newsletter === 'signup' && email) {
-                // Redirect to ZenPlanner contact form with pre-filled newsletter signup
-                const zenplannerUrl = `https://nlbjj.sites.zenplanner.com/contact.cfm?newsletter=signup&email=${encodeURIComponent(email)}`;
-                window.location.href = zenplannerUrl;
+                // Pre-fill the contact form with newsletter signup message
+                const messageTextarea = document.querySelector('textarea[name="message"]');
+                if (messageTextarea) {
+                    messageTextarea.value = `Hi! I'd like to subscribe to your newsletter. My email is: ${email}\n\nPlease add me to your mailing list for blog updates and training tips.`;
+                }
+                
+                // Show a notification
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #10b981;
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    z-index: 1000;
+                    font-weight: 500;
+                `;
+                notification.textContent = 'Thank you for subscribing! We\'ll add you to our newsletter.';
+                document.body.appendChild(notification);
+                
+                // Remove notification after 5 seconds
+                setTimeout(() => {
+                    notification.remove();
+                }, 5000);
             }
         });
     </script>
