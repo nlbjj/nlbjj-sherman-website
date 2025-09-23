@@ -58,7 +58,7 @@
                             <div class="carousel-track">
                                 <!-- Caveirinha Annecy Jiu-Jitsu Seminar -->
                                 <div class="seminar-group">
-                                    <h4>Caveirinha Annecy Jiu-Jitsu Seminar</h4>
+                                    <h4>2025 Caveirinha Annecy Jiu-Jitsu Seminar</h4>
                                     <div class="photo-grid">
                                         <div class="photo-item">
                                             <img src="assets/seminars/annecy/annecy-1.jpg" alt="Annecy Seminar Teaching" class="seminar-photo">
@@ -101,7 +101,7 @@
                                 
                                 <!-- Next Level Besançon School -->
                                 <div class="seminar-group">
-                                    <h4>Next Level Besançon School</h4>
+                                    <h4>2025 Next Level Besançon School</h4>
                                     <div class="photo-grid">
                                         <div class="photo-item">
                                             <img src="assets/seminars/besancon-school/besancon-school-1.jpg" alt="Besançon School Training" class="seminar-photo">
@@ -144,7 +144,7 @@
                                 
                                 <!-- Next Level Besançon Seminar -->
                                 <div class="seminar-group">
-                                    <h4>Next Level Besançon Seminar</h4>
+                                    <h4>2025 Next Level Besançon Seminar</h4>
                                     <div class="photo-grid">
                                         <div class="photo-item">
                                             <img src="assets/seminars/besancon-seminar/besancon-seminar-1.jpg" alt="Besançon Seminar Teaching" class="seminar-photo">
@@ -331,8 +331,11 @@
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
         const indicators = document.querySelectorAll('.indicator');
+        const carouselContainer = document.querySelector('.carousel-container');
         let currentSlide = 0;
         const totalSlides = document.querySelectorAll('.seminar-group').length;
+        let autoSlideInterval;
+        let isPaused = false;
 
         function updateCarousel() {
             const translateX = -currentSlide * 100;
@@ -353,6 +356,47 @@
             updateCarousel();
         }
 
+        function startAutoSlide() {
+            if (!isPaused) {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        function togglePause() {
+            isPaused = !isPaused;
+            if (isPaused) {
+                stopAutoSlide();
+            } else {
+                startAutoSlide();
+            }
+        }
+
+        // Pause on hover
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', () => {
+                stopAutoSlide();
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                if (!isPaused) {
+                    startAutoSlide();
+                }
+            });
+        }
+
+        // Click to pause/play
+        if (carouselContainer) {
+            carouselContainer.addEventListener('click', (e) => {
+                // Don't toggle if clicking on navigation buttons
+                if (e.target.closest('.carousel-controls')) return;
+                togglePause();
+            });
+        }
+
         if (nextBtn && prevBtn) {
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
@@ -365,8 +409,118 @@
             });
         });
 
-        // Auto-advance carousel
-        setInterval(nextSlide, 5000);
+        // Start auto-advance carousel
+        startAutoSlide();
+
+        // Lightbox functionality for full-size images
+        const photoItems = document.querySelectorAll('.photo-item');
+        
+        photoItems.forEach(photoItem => {
+            const img = photoItem.querySelector('img');
+            if (img) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', () => {
+                    showLightbox(img.src, img.alt);
+                });
+            }
+        });
+
+        function showLightbox(imageSrc, imageAlt) {
+            // Create lightbox overlay
+            const lightbox = document.createElement('div');
+            lightbox.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+                cursor: pointer;
+            `;
+
+            // Create image container
+            const imgContainer = document.createElement('div');
+            imgContainer.style.cssText = `
+                position: relative;
+                max-width: 90%;
+                max-height: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            `;
+
+            // Create full-size image
+            const fullImg = document.createElement('img');
+            fullImg.src = imageSrc;
+            fullImg.alt = imageAlt;
+            fullImg.style.cssText = `
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            `;
+
+            // Create close button
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '×';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: -40px;
+                right: -40px;
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                color: white;
+                font-size: 30px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+            `;
+
+            closeBtn.addEventListener('mouseenter', () => {
+                closeBtn.style.background = 'rgba(255, 255, 255, 0.3)';
+            });
+
+            closeBtn.addEventListener('mouseleave', () => {
+                closeBtn.style.background = 'rgba(255, 255, 255, 0.2)';
+            });
+
+            // Assemble lightbox
+            imgContainer.appendChild(fullImg);
+            imgContainer.appendChild(closeBtn);
+            lightbox.appendChild(imgContainer);
+            document.body.appendChild(lightbox);
+
+            // Close lightbox functions
+            function closeLightbox() {
+                document.body.removeChild(lightbox);
+            }
+
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeLightbox();
+            });
+
+            lightbox.addEventListener('click', closeLightbox);
+
+            // Close with Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
 
         // Header scroll effect
         const header = document.querySelector('.header');
