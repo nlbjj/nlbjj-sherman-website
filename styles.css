@@ -4169,6 +4169,21 @@ section {
     font-weight: bold;
 }
 
+.program-benefits {
+    background: linear-gradient(135deg, #fef3f2 0%, #fef7f7 100%);
+    border-left: 4px solid #dc2626;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.program-benefits strong {
+    color: #dc2626;
+    font-weight: 600;
+}
+
 .program-schedule {
     background: #f8fafc;
     padding: 15px;
