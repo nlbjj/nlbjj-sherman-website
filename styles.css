@@ -523,11 +523,20 @@ body {
     font-weight: 700;
 }
 
+.gallery-title {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
 .gallery-subtitle {
     font-size: 1.2rem;
     color: #6b7280;
     margin-bottom: 50px;
     font-style: italic;
+    text-align: center;
 }
 
 .seminar-carousel {
@@ -1291,6 +1300,15 @@ body {
     flex-wrap: wrap;
 }
 
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .instructor-text h3 {
     color: #dc2626;
     margin-bottom: 25px;
@@ -1327,6 +1345,16 @@ body {
 .seminar-image:hover {
     transform: scale(1.02);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.zoomed-image {
+    transform: scale(1.8) !important;
+    object-fit: cover !important;
+    object-position: 45% 50% !important;
+}
+
+.instructor-image:has(.zoomed-image) {
+    overflow: hidden !important;
 }
 
 .image-caption {
