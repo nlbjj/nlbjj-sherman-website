@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Next Level Jiu-Jitsu Sherman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .privacy-policy {
+            padding: 80px 0 60px;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+        
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            line-height: 1.7;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .company-name {
+            font-size: 1.2rem;
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .effective-date {
+            font-size: 1rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .privacy-intro {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #dc2626;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+        
+        .privacy-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #fafbfc;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dc2626;
+            display: inline-block;
+        }
+        
+        .info-grid {
+            margin-top: 20px;
+        }
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .info-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .protection-info,
+        .cookies-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .sms-section {
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+        
+        .sms-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .sms-details {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fef2f2;
+            border-radius: 8px;
+            border: 1px solid #fecaca;
+        }
+        
+        .sms-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .sms-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #374151;
+        }
+        
+        .sms-list li:before {
+            content: "📱";
+            position: absolute;
+            left: 0;
+        }
+        
+        .contact-section {
+            background: #f0f9ff;
+            border-color: #bfdbfe;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item strong {
+            color: #1f2937;
+            font-weight: 600;
+            min-width: 80px;
+        }
+        
+        .contact-item a {
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: #b91c1c;
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+        }
+        
+        .back-link .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-section {
+                padding: 20px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="https://nlbjja.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/NLBJJ-w-alpha.PNG" alt="Next Level Jiu-Jitsu Sherman, TX" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="privacy-policy">
+            <div class="container">
+                <div class="privacy-content">
+                    <div class="privacy-header">
+                        <h1>Privacy Policy</h1>
+                        <p class="company-name">Next Level BJJ Sherman LLC</p>
+                        <p class="effective-date">Effective Date: September 25, 2025</p>
+                    </div>
+                    
+                    <div class="privacy-intro">
+                        <p>Next Level BJJ Sherman LLC respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect the data you provide.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Information We Collect</h2>
+                        <p>We may collect personal information including:</p>
+                        <div class="info-grid">
+                            <ul class="info-list">
+                                <li>Name, email, phone number, and address</li>
+                                <li>Date of birth</li>
+                                <li>Waiver and membership form data</li>
+                                <li>Emergency contact information</li>
+                                <li>Signature and participation data</li>
+                                <li>Other details submitted via forms, applications, or communications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>How We Use Your Information</h2>
+                        <p>We use the information to:</p>
+                        <div class="info-grid">
+                            <ul class="info-list">
+                                <li>Process waivers, memberships, and event registrations</li>
+                                <li>Communicate about classes, schedules, or member-related matters</li>
+                                <li>Maintain accurate participant records</li>
+                                <li>Ensure compliance with legal and safety obligations</li>
+                                <li>Improve services and enhance the experience of members and visitors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>How We Protect Your Information</h2>
+                        <div class="protection-info">
+                            <p>We use secure storage systems and limit data access to authorized personnel. We do not sell or share your personal data with third parties, except for legal or compliance reasons.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Cookies and Website Use</h2>
+                        <div class="cookies-info">
+                            <p>Our website may use cookies or similar tools to enhance your experience. These tools may collect general technical or usage data but are not used to capture sensitive personal information. You may disable cookies via your browser settings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section sms-section">
+                        <h2>SMS Communications</h2>
+                        <div class="sms-info">
+                            <p>Upon filling out applications and/or registering in our system, our clients consent to receive SMS from Next Level BJJ.</p>
+                            <div class="sms-details">
+                                <p><strong>Important:</strong></p>
+                                <ul class="sms-list">
+                                    <li>Reply <strong>STOP</strong> to opt-out</li>
+                                    <li>Reply <strong>HELP</strong> for support</li>
+                                    <li>Message and data rates apply</li>
+                                    <li>Messaging frequency may vary</li>
+                                </ul>
+                                <p>SMS consent is not shared with third parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section contact-section">
+                        <h2>Data Access & Deletion Requests</h2>
+                        <p>You may request to access, correct, or delete your personal data at any time. For questions or data-related requests, contact us:</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>📧 Email:</strong> 
+                                <a href="mailto:contact@nlbjj.com">contact@nlbjj.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>📞 Phone:</strong> 
+                                <a href="tel:+19033095599">(903) 309-5599</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="back-link">
+                        <a href="index.html" class="btn btn-primary">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="https://www.nlbjja.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/nlbjja_official_badge.png" alt="NLBJJA" class="footer-badge">
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Next Level Jiu-Jitsu Sherman. All rights reserved.</p>
+                    <p>Part of the Next Level Brazilian Jiu-Jitsu Association</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/nlbjj.sherman" target="_blank" rel="noopener noreferrer" class="instagram-link prominent-instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+                            <span>@nlbjj.sherman</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (if needed)
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !expanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
