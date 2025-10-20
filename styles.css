@@ -2490,6 +2490,34 @@ section {
     margin-top: 20px;
 }
 
+/* Membership Section */
+.membership {
+    padding: 100px 0;
+    background: white;
+}
+
+.membership h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.membership p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membership-form-container {
+    margin-top: 40px;
+}
+
 /* Grand Opening Decoration Styles */
 .grand-opening-decoration {
     position: relative;
@@ -2714,6 +2742,38 @@ section {
     
     .events-footer {
         padding: 30px 20px;
+    }
+}
+
+/* Responsive Design for Membership */
+@media (max-width: 768px) {
+    .membership {
+        padding: 60px 0;
+    }
+    
+    .membership h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .membership p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .membership-form-container {
+        margin: 30px 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership h2 {
+        font-size: 2rem;
+    }
+    
+    .membership p {
+        font-size: 0.95rem;
+        padding: 0 15px;
     }
 }
 
