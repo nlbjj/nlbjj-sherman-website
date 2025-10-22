@@ -8,7 +8,15 @@ contact_link: "Contact Us →"
 order: 2
 ---
 
-Our youth Brazilian Jiu-Jitsu program is specially designed for children and teenagers. We emphasize:
+Our youth Brazilian Jiu-Jitsu program is designed for children ages 5-13, with two specialized age groups:
+
+## Little Champs (Ages 5-9)
+Focus on discipline, fun, movement patterns, and base control. Perfect for young children to develop coordination, confidence, and basic BJJ concepts through engaging games and activities.
+
+## Junior Warriors (Ages 10-13)
+Structured training focusing on drilling, technique precision, and situational sparring. This program serves as a bridge to adult classes for mature students.
+
+We emphasize:
 
 - **Character Development**: Building discipline, respect, and confidence
 - **Physical Fitness**: Improving coordination, strength, and flexibility
