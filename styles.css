@@ -4955,6 +4955,20 @@ section {
     margin-bottom: 30px;
 }
 
+.registration-card .btn-secondary {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    border-color: #dc2626;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.registration-card .btn-secondary:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    border-color: #b91c1c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
 /* Schedule Page Styles */
 .weekly-schedule {
     padding: 80px 0;
