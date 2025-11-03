@@ -3898,15 +3898,21 @@ section {
     margin-bottom: 30px;
 }
 
-.instructor-achievements, .instructor-experience, .instructor-philosophy, .instructor-role, .instructor-journey {
+.instructor-achievements, .instructor-experience, .instructor-philosophy, .instructor-role, .instructor-journey, .instructor-education {
     margin-bottom: 30px;
 }
 
-.instructor-achievements h4, .instructor-experience h4, .instructor-philosophy h4, .instructor-role h4, .instructor-journey h4 {
+.instructor-achievements h4, .instructor-experience h4, .instructor-philosophy h4, .instructor-role h4, .instructor-journey h4, .instructor-education h4 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 15px;
     color: #1f2937;
+}
+
+.instructor-education p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4b5563;
 }
 
 .instructor-achievements ul, .instructor-experience ul {
