@@ -34,6 +34,7 @@ body {
     right: 0;
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: visible !important;
 }
 
 /* Header scroll effect */
@@ -52,24 +53,56 @@ body {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 80px;
+    align-items: center !important;
+    height: 85px !important;
+    padding-top: 0 !important;
+    overflow: visible !important;
+}
+
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    overflow: visible !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.logo a {
+    display: block !important;
+    line-height: 0 !important;
 }
 
 .logo-img {
-    height: 80px;
-    width: auto;
+    height: 65px !important;
+    width: auto !important;
     transition: transform 0.3s ease;
+    object-fit: contain !important;
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    transform: translateY(0) !important;
+    vertical-align: middle !important;
 }
 
 .logo-img:hover {
-    transform: scale(1.05);
+    transform: translateY(0) scale(1.05) !important;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav-menu a {
@@ -83,6 +116,9 @@ body {
     font-size: 0.9rem;
     letter-spacing: 0.01em;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .nav-menu a::before {
@@ -205,14 +241,16 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.1;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 30%, #dc2626 60%, #ef4444 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff !important;
     animation: fadeInUp 1s ease-out;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.3));
+    letter-spacing: -0.02em;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-clip: unset !important;
+    filter: none !important;
 }
 
 .hero-content h1::after {
@@ -222,10 +260,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 120px;
-    height: 4px;
-    background: linear-gradient(90deg, #dc2626, #ef4444, #f87171, #dc2626);
+    height: 3px;
+    background: #dc2626 !important;
     border-radius: 2px;
-    animation: fadeInUp 1s ease-out 0.3s both, pulse 2s ease-in-out infinite 1s;
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 @keyframes pulse {
