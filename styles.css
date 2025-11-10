@@ -1883,17 +1883,17 @@ section {
     }
     .nav-menu a {
         font-size: 1.1rem;
-        color: #e2e8f0;
-        padding: 14px 18px;
+        color: #f8fafc;
+        padding: 15px 20px;
         display: block;
         width: 100%;
-        border-radius: 12px;
-        background: rgba(148, 163, 184, 0.12);
-        border: 1px solid rgba(148, 163, 184, 0.18);
-        box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
+        border-radius: 14px;
+        background: rgba(15, 23, 42, 0.72);
+        border: 1px solid rgba(30, 41, 59, 0.65);
+        box-shadow: 0 18px 38px rgba(15, 23, 42, 0.35);
     }
     .nav-menu a::before {
-        background: rgba(148, 163, 184, 0.18);
+        background: rgba(15, 23, 42, 0.55);
     }
     .nav-menu a::after {
         background: transparent;
@@ -1902,8 +1902,8 @@ section {
         color: #f8fafc;
         transform: translateY(-2px);
         box-shadow: 0 18px 36px rgba(15, 23, 42, 0.35);
-        background: linear-gradient(120deg, rgba(220, 38, 38, 0.95), rgba(239, 68, 68, 0.85));
-        border-color: transparent;
+        background: linear-gradient(120deg, rgba(220, 38, 38, 0.98), rgba(239, 68, 68, 0.9));
+        border-color: rgba(248, 113, 113, 0.6);
     }
     .mobile-menu-header {
         display: flex;
