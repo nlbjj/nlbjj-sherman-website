@@ -34,7 +34,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
+                <ul class="nav-menu" aria-hidden="true">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="instructors.html">Instructors</a></li>
@@ -46,6 +46,7 @@
                 </ul>
             </div>
         </nav>
+        <div class="mobile-menu-overlay" aria-hidden="true"></div>
     </header>
 
     <main>
@@ -466,11 +467,49 @@
         // Mobile menu toggle (if needed)
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.querySelector('.mobile-menu-overlay');
+        const body = document.body;
+
         if (navToggle && navMenu) {
+            const closeMenu = () => {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('is-open');
+                navMenu.setAttribute('aria-hidden', 'true');
+                body.classList.remove('nav-open');
+                if (menuOverlay) {
+                    menuOverlay.classList.remove('is-visible');
+                }
+            };
+
             navToggle.addEventListener('click', () => {
                 const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                navToggle.setAttribute('aria-expanded', !expanded);
-                navMenu.classList.toggle('active');
+                const newState = !expanded;
+                navToggle.setAttribute('aria-expanded', newState.toString());
+                navMenu.classList.toggle('is-open', newState);
+                navMenu.setAttribute('aria-hidden', (!newState).toString());
+                body.classList.toggle('nav-open', newState);
+
+                if (menuOverlay) {
+                    menuOverlay.classList.toggle('is-visible', newState);
+                }
+            });
+
+            if (menuOverlay) {
+                menuOverlay.addEventListener('click', closeMenu);
+            }
+
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        closeMenu();
+                    }
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
             });
         }
 
