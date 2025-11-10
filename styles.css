@@ -1786,8 +1786,8 @@ section {
         right: 0;
         width: 80vw;
         max-width: 320px;
-        background: rgba(255,255,255,0.98);
-        box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+        background: rgba(15, 23, 42, 0.96);
+        box-shadow: -4px 0 24px rgba(15, 23, 42, 0.35);
         border-radius: 0 0 0 20px;
         padding: 40px 30px 30px 30px;
         transform: translateX(100%);
@@ -1796,6 +1796,10 @@ section {
         text-align: right;
         gap: 30px;
         flex-direction: column;
+        backdrop-filter: blur(12px);
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        color: #f8fafc;
     }
     .nav-menu.active {
         transform: translateX(0);
@@ -1805,10 +1809,21 @@ section {
         margin: 20px 0;
     }
     .nav-menu a {
-        font-size: 1.3rem;
-        color: #1f2937;
-        padding: 10px 0;
+        font-size: 1.2rem;
+        color: #f8fafc;
+        padding: 12px 0;
         display: inline-block;
+    }
+    .nav-menu a::before {
+        background: rgba(148, 163, 184, 0.14);
+    }
+    .nav-menu a::after {
+        background: #f87171;
+    }
+    .nav-menu a:hover {
+        color: #facc15;
+        transform: translateY(0);
+        box-shadow: none;
     }
 }
 
