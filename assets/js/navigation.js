@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for on-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        const href = anchor.getAttribute('href');
-        if (!href || href.length < 2) {
-            return;
-        }
-
         anchor.addEventListener('click', event => {
-            const target = document.querySelector(href);
+            const href = anchor.getAttribute('href');
+            if (!href || href === '#') {
+                return;
+            }
+
+            let target = null;
+            try {
+                target = document.querySelector(href);
+            } catch (error) {
+                return;
+            }
+
             if (target) {
                 event.preventDefault();
                 target.scrollIntoView({
