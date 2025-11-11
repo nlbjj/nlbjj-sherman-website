@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for on-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (anchor.closest('[id^="membership_"]') || anchor.closest('[id^="leadcapture_"]')) {
+            return;
+        }
+
         anchor.addEventListener('click', event => {
             const href = anchor.getAttribute('href');
             if (!href || href === '#') {

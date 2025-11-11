@@ -332,6 +332,10 @@
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (anchor.closest('[id^="membership_"]') || anchor.closest('[id^="leadcapture_"]')) {
+                return;
+            }
+
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 if (!href || href === '#') {
