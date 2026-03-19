@@ -587,6 +587,59 @@ body.nav-open {
     box-shadow: 0 30px 60px rgba(0,0,0,0.2);
 }
 
+/* About section: blend training photo into page (soft edges, no harsh “box”) */
+.about .about-image {
+    position: relative;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.about .about-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    pointer-events: none;
+    z-index: 1;
+    box-shadow:
+        inset 0 0 50px 28px #f8fafc,
+        inset 0 0 90px 55px rgba(241, 245, 249, 0.85);
+}
+
+.about .about-image .training-image {
+    display: block;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    -webkit-mask-image: radial-gradient(
+        ellipse 92% 88% at 50% 45%,
+        #000 62%,
+        rgba(0, 0, 0, 0.55) 82%,
+        transparent 100%
+    );
+    mask-image: radial-gradient(
+        ellipse 92% 88% at 50% 45%,
+        #000 62%,
+        rgba(0, 0, 0, 0.55) 82%,
+        transparent 100%
+    );
+    /* Light backgrounds in the photo merge with the section (similar to cut-out PNG on light UI) */
+    mix-blend-mode: multiply;
+    filter: contrast(1.03) saturate(0.98);
+}
+
+.about .about-image .training-image:hover {
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about .about-image::before {
+        box-shadow:
+            inset 0 0 40px 20px #f8fafc,
+            inset 0 0 70px 40px rgba(241, 245, 249, 0.9);
+    }
+}
+
 .quote {
     text-align: center;
     font-style: italic;
