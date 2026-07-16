@@ -79,7 +79,7 @@
                         <h2 style="margin-bottom: 20px; color: #1f2937;">Saved Articles</h2>
                         <div id="bookmarked-list" class="articles-list">
                             <div class="no-bookmarks" style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
-                                <div style="font-size: 3rem; margin-bottom: 15px;">📚</div>
+                                <div style="font-size: 3rem; margin-bottom: 15px;"></div>
                                 <h3>No articles saved yet</h3>
                                 <p>Start reading our blog and save articles you want to read later!</p>
                                 <a href="blog.html" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Browse Articles</a>
@@ -100,13 +100,13 @@
                         <h3 style="margin-bottom: 20px; color: #1f2937;">Quick Actions</h3>
                         <div class="action-buttons" style="display: flex; gap: 15px; flex-wrap: wrap;">
                             <button id="clear-all-bookmarks" class="btn btn-outline" style="padding: 10px 20px;">
-                                🗑️ Clear All Bookmarks
+                                 Clear All Bookmarks
                             </button>
                             <button id="export-reading-list" class="btn btn-outline" style="padding: 10px 20px;">
-                                📤 Export Reading List
+                                 Export Reading List
                             </button>
                             <button id="refresh-stats" class="btn btn-primary" style="padding: 10px 20px;">
-                                🔄 Refresh Stats
+                                 Refresh Stats
                             </button>
                         </div>
                     </div>
@@ -142,9 +142,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p>📍 Sherman, Texas</p>
-                    <p>📞 (903) 555-0123</p>
-                    <p>✉️ info@nlbjjsherman.com</p>
+                    <p>Sherman, Texas</p>
+                    <p>(903) 555-0123</p>
+                    <p>info@nlbjjsherman.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -221,7 +221,7 @@
                 if (bookmarkedArticles.length === 0) {
                     bookmarkedList.innerHTML = `
                         <div class="no-bookmarks" style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
-                            <div style="font-size: 3rem; margin-bottom: 15px;">📚</div>
+                            <div style="font-size: 3rem; margin-bottom: 15px;"></div>
                             <h3>No articles saved yet</h3>
                             <p>Start reading our blog and save articles you want to read later!</p>
                             <a href="blog.html" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Browse Articles</a>
@@ -237,7 +237,7 @@
                                 <div class="article-actions" style="display: flex; gap: 10px; align-items: center;">
                                     <a href="${article.url}" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Read Article</a>
                                     <button class="remove-bookmark-btn" data-article-id="${article.id}" style="padding: 8px 12px; background: #ef4444; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
-                                        🗑️ Remove
+                                         Remove
                                     </button>
                                 </div>
                             </div>
@@ -271,7 +271,7 @@
                 if (progressItems.length === 0) {
                     progressList.innerHTML = `
                         <div style="text-align: center; padding: 40px; color: #6b7280; font-style: italic;">
-                            <div style="font-size: 2rem; margin-bottom: 10px;">📖</div>
+                            <div style="font-size: 2rem; margin-bottom: 10px;"></div>
                             <p>No reading progress to show yet</p>
                         </div>
                     `;
