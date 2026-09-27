@@ -1,0 +1,65 @@
+/* nl-contact.css - the contact form and the "Text us" bubble. Messages go straight to the Next Level Portal (2026-09-27). */
+.nl-form { display: grid; gap: 16px; text-align: left; }
+.nl-form label { display: block; font-weight: 600; color: #1f2937; font-size: 0.95rem; }
+.nl-form input[type="text"], .nl-form input[type="tel"], .nl-form input[type="email"], .nl-form textarea {
+    display: block; width: 100%; margin-top: 6px; padding: 13px 14px; font: inherit; font-weight: 400; font-size: 1rem;
+    color: #111827; background: #f9fafb; border: 1px solid #d1d5db; border-radius: 10px; transition: border-color .2s, box-shadow .2s;
+}
+.nl-form textarea { resize: vertical; min-height: 84px; }
+.nl-form input:focus, .nl-form textarea:focus { outline: none; border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220, 38, 38, .15); background: #fff; }
+.nl-form .nl-bad { border-color: #dc2626 !important; }
+.nl-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.nl-opt { font-weight: 400; color: #6b7280; font-size: .85rem; }
+.nl-who { border: 0; padding: 0; margin: 0; }
+.nl-who legend { font-weight: 600; color: #1f2937; font-size: .95rem; margin-bottom: 8px; }
+.nl-who .nl-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.nl-who label { position: relative; font-weight: 500; cursor: pointer; }
+.nl-who input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.nl-who span { display: inline-block; padding: 9px 16px; border: 1px solid #d1d5db; border-radius: 999px; background: #fff; color: #374151; transition: all .15s; }
+.nl-who input:checked + span { background: #dc2626; border-color: #dc2626; color: #fff; }
+.nl-who input:focus-visible + span { box-shadow: 0 0 0 3px rgba(220, 38, 38, .25); }
+.nl-consent { display: flex !important; gap: 10px; align-items: flex-start; font-weight: 400 !important; font-size: .82rem !important; color: #4b5563 !important; line-height: 1.5; }
+.nl-consent input { margin-top: 3px; width: 18px; height: 18px; flex: 0 0 18px; accent-color: #dc2626; }
+.nl-consent a { color: #dc2626; }
+.nl-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+.nl-form .nl-send { width: 100%; cursor: pointer; font-family: inherit; }
+.nl-form .nl-send[disabled] { opacity: .65; cursor: wait; transform: none; }
+.nl-status { margin: 0 !important; font-size: .95rem !important; min-height: 1.2em; }
+.nl-status.nl-err { color: #b91c1c !important; font-weight: 600; }
+.nl-done { text-align: center; padding: 28px 18px; border-radius: 14px; background: #f0fdf4; border: 1px solid #bbf7d0; }
+.nl-done h4 { font-size: 1.35rem; color: #166534; margin-bottom: 8px; }
+.nl-done p { color: #14532d !important; margin: 0 0 6px !important; font-size: 1.02rem !important; }
+.nl-done a { color: #dc2626; font-weight: 600; }
+.nl-or { font-size: .9rem !important; color: #6b7280 !important; text-align: center; margin: 0 !important; }
+.nl-or a { color: #dc2626; font-weight: 600; text-decoration: none; }
+
+/* the bubble */
+.nl-bub { position: fixed; right: 18px; bottom: 18px; z-index: 9990; display: inline-flex; align-items: center; gap: 9px; padding: 13px 20px 13px 16px;
+    border: 0; border-radius: 999px; cursor: pointer; font: 600 1rem 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #fff;
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); box-shadow: 0 8px 24px rgba(220, 38, 38, .35); transition: transform .2s, box-shadow .2s; }
+.nl-bub:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(220, 38, 38, .45); }
+.nl-bub svg { width: 22px; height: 22px; flex: 0 0 22px; }
+.nl-bub[aria-expanded="true"] { display: none; }
+.nl-pan { position: fixed; right: 18px; bottom: 18px; z-index: 9991; width: 370px; max-width: calc(100vw - 24px); max-height: calc(100vh - 36px); overflow-y: auto;
+    background: #fff; border-radius: 18px; box-shadow: 0 24px 60px rgba(15, 23, 42, .28); font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.nl-pan[hidden] { display: none; }
+.nl-pan-hd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 18px; color: #fff; border-radius: 18px 18px 0 0;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%); }
+.nl-pan-hd strong { display: block; font-size: 1.05rem; }
+.nl-pan-hd small { display: block; opacity: .8; font-size: .82rem; }
+.nl-x { background: rgba(255, 255, 255, .12); border: 0; color: #fff; width: 34px; height: 34px; border-radius: 50%; font-size: 1.3rem; line-height: 1; cursor: pointer; }
+.nl-pan-bd { padding: 18px; display: grid; gap: 12px; }
+.nl-pan-bd .nl-form { gap: 12px; }
+.nl-pan-bd .nl-form input[type="text"], .nl-pan-bd .nl-form input[type="tel"], .nl-pan-bd .nl-form input[type="email"], .nl-pan-bd .nl-form textarea { padding: 11px 12px; }
+.nl-big { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 15px 16px; border-radius: 12px; font-weight: 700; font-size: 1.05rem;
+    text-decoration: none; color: #fff; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); box-shadow: 0 4px 14px rgba(220, 38, 38, .3); }
+.nl-big.nl-ghost { background: #fff; color: #1f2937; border: 1px solid #d1d5db; box-shadow: none; }
+.nl-link { background: none; border: 0; color: #dc2626; font-family: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; padding: 4px; text-decoration: underline; }
+.nl-fine { font-size: .78rem; color: #6b7280; line-height: 1.45; margin: 0; }
+
+@media (max-width: 768px) {
+    .nl-row2 { grid-template-columns: 1fr; }
+    .nl-bub { right: 12px; bottom: 12px; padding: 12px 16px 12px 14px; font-size: .95rem; }
+    .nl-pan { right: 8px; left: 8px; bottom: 8px; width: auto; max-width: none; }
+}
+@media print { .nl-bub, .nl-pan { display: none !important; } }
